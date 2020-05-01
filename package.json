@@ -1,5 +1,10 @@
 {
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0"
+  },
+  "scripts": {
+    "generate": "eleventy --input=. --output=_site",
+    "serve": "eleventy --serve --port=1111",
+    "watch": "eleventy --watch"
   }
 }
