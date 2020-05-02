@@ -1,10 +1,12 @@
 {
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "concurrently": "^5.2.0",
+    "netlify-cms-proxy-server": "^1.2.6"
   },
   "scripts": {
     "generate": "eleventy --input=src",
     "serve": "eleventy --input=src --serve --port=1111",
-    "watch": "eleventy --watch"
+    "dev": "concurrently --kill-others \"netlify-cms-proxy-server\" \"yarn serve\""
   }
 }
